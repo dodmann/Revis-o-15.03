@@ -11,7 +11,7 @@ public class Principal {
 	o saldo deve ser apresentado sempre de forma atualizada. */
 	public static void main(String[] args) {
 		ContaCorrente conta = new ContaCorrente();
-		int opcao;
+		int opcao = 0;
 		Scanner entrada = new Scanner(System.in);
 		
 		//Digitar o número da conta
@@ -19,34 +19,37 @@ public class Principal {
 		conta.setNumero(entrada.nextLine());
 		
 		//Depositar, sacar ou finalizar
-		System.out.println("Digite a opção desejada para as operações com a conta: ");
-		System.out.println("1 - Depositar\n2 - Sacar\n3 - Finalizar sessão");
-		opcao = entrada.nextInt();
 		
-		while(opcao != 3) {
+		
+		while(opcao != 3) {	
+			System.out.println("\nDigite a opção desejada para as operações com a conta: ");
+			System.out.println("\t1 - Depositar\n\t2 - Sacar\n\t3 - Finalizar sessão");
+			opcao = entrada.nextInt();
 			switch (opcao) {
-				//Depositar
 				case 1: 
 					System.out.println("Conta "+conta.getNumero());
-					System.out.println("O saldo da conta é: "+conta.getSaldo());
+					System.out.println("O saldo da conta é: R$ "+conta.getSaldo());
 					System.out.println("Digite o valor a ser depositado:");				
 					conta.depositar(entrada.nextDouble());
-					System.out.println("O saldo da conta é: "+conta.getSaldo());
+					System.out.println("O saldo da conta é: R$ "+conta.getSaldo());
 				break;
 				
 				//Sacar
 				case 2:
 					System.out.println("Conta "+conta.getNumero());
-					System.out.println("O saldo da conta é: "+conta.getSaldo());
+					System.out.println("O saldo da conta é: R$ "+conta.getSaldo());
 					System.out.println("Digite o valor a ser sacado:");				
 					conta.sacar(entrada.nextDouble());
-					System.out.println("O saldo da conta é: "+conta.getSaldo());
+					System.out.println("O saldo da conta é: R$ "+conta.getSaldo());
 				break;
 				
 				//Finalizar
 				case 3:
 					System.out.println("Sessão finalizada.");
 				break;
+				
+				default: 
+					System.out.println("Opção inválida.");
 			}
 		} 
 		entrada.close();
