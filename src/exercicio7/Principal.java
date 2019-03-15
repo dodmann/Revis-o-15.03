@@ -8,4 +8,11 @@ public class Principal {
 		b. aumentar e diminuir o número do canal em uma unidade
 		c. trocar para um canal indicado;
 		d. consultar o valor do volume de som e o canal selecionado. */
+	public static void main(String[] args) {
+		Televisao televisao = new Televisao();
+		ControleRemoto controle = new ControleRemoto();
+		System.out.println("Aumentar volume, 1: ");
+		controle.setTelevisao(televisao);
+		controle.aumentaVolume();
+	}
 }
