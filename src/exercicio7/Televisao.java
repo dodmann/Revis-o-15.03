@@ -4,6 +4,13 @@ public class Televisao {
 	private int volume = 0;
 	private int canal = 0;
 	
+	Televisao(int volume, int canal, ControleRemoto controleRemoto){
+		this.volume = volume;
+		this.canal = canal;
+	}
+	
+	Televisao(){}
+	
 	public int getVolume() {
 		return this.volume;
 	}
@@ -18,14 +25,6 @@ public class Televisao {
 
 	public void setCanal(int canal) {
 		this.canal = canal;
-	}
-	
-	Televisao(int volume, int canal, ControleRemoto controleRemoto){
-		this.volume = volume;
-		this.canal = canal;
-	}
-	
-	Televisao(){}
-	
+	}		
 
 }
