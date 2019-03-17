@@ -4,9 +4,9 @@ import java.util.Scanner;
 
 public class Principal {
 	/* Elaborar um programa que entre nome, sala e quatro notas escolares de um aluno. O
-		programa deve, ao final, apresentar o resultado da média do aluno. Para realizar essa
-		tarefa, o programa deve usar uma classe que tenha nome, notas e média como campos
-		públicos e sala como campo protegido, o qual necessitará de dois métodos de acesso,
+		programa deve, ao final, apresentar o resultado da media do aluno. Para realizar essa
+		tarefa, o programa deve usar uma classe que tenha nome, notas e mdia como campos
+		publicos e sala como campo protegido, o qual necessitara de dois metodos de acesso,
 		um para escrever no campo e outro para ler o campo. */
 	public static void main(String[] args) {
 		MediaAluno mediaAluno = new MediaAluno();
@@ -36,7 +36,7 @@ public class Principal {
 		
 		System.out.println("\nNome: "+mediaAluno.getNome());
 		System.out.println("Sala: "+mediaAluno.getSala());
-		System.out.println("Média final: "+mediaAluno.getMedia());
+		System.out.println("Media final: "+mediaAluno.getMedia());
 		
 		//fechamento do scanner
 		entrada.close();
