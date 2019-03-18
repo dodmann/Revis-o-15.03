@@ -13,4 +13,20 @@ public class NumeroComplexo {
 	public void eIgual() {
 		
 	}
+	
+	public void soma() {
+		
+	}
+	
+	public void subtrai() {
+		
+	}
+	
+	public void multiplica() {
+		
+	}
+	
+	public void divide() {
+		
+	}
 }

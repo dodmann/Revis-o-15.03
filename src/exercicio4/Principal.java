@@ -14,7 +14,7 @@ public class Principal {
 		Scanner entrada = new Scanner(System.in);
 		BombaDagua bomba = new BombaDagua();
 		
-		System.out.println("Digite a quantidade de segundos em que a bomba será ligada: ");
+		System.out.println("Digite a quantidade de segundos em que a bomba sera ligada: ");
 		bomba.ligar(entrada.nextInt());
 		entrada.close();
 	}

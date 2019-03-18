@@ -4,6 +4,11 @@ public class GPS {
 	private String idioma;
 	private String rota;
 
+	GPS(String idioma, String rota){
+		this.idioma = idioma;
+		this.rota = rota;
+	}
+	
 	GPS(){}
 
 	public String getIdioma() {
@@ -23,7 +28,7 @@ public class GPS {
 	}
 	
 	public void exibeAtributos() {
-		System.out.println("\nIdioma: "+this.getIdioma()+"\nRota: "+this.getRota());
+		System.out.println("Idioma: "+this.getIdioma()+"\nRota: "+this.getRota()+"\n");
 	}
 	
 }

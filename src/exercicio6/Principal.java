@@ -17,4 +17,8 @@ public class Principal {
 		b. Use as classes para construir um diagrama de classes e exibir a estrutura do
 		sistema.
 		c. Escreva um programa para simular o sistema, usando as classes.*/
+	public static void main(String[] args) {
+		Controlador controlador = new Controlador();
+		controlador.ligarSistema();
+	}
 }
