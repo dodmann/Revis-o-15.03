@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Controlador {
-	private String codigoDeSegurança;	
+	private String codigoDeSeguranca;	
 //	private Campainha campainha;
 //	private Sirene sirene;
 	private Sensor sensor;
@@ -22,16 +22,16 @@ public class Controlador {
 	}
 	
 	public void definirCodigoDeSeguranca(String codigoDeSeguranca) {
-		this.setCodigoDeSegurança(codigoDeSeguranca);
+		this.setCodigoDeSeguranca(codigoDeSeguranca);
 	}
 	
 	public void ligarSistema() {
 		System.out.println("Digite o codigo de seguranca a ser criado:");
 		Scanner entrada = new Scanner(System.in);		
 		this.definirCodigoDeSeguranca(entrada.nextLine());
-		System.out.println("Código de segurança: ");
+		System.out.println("Codigo de seguranca: ");
 		String result = entrada.nextLine();
-		if (this.getCodigoDeSegurança().equals(result)) {
+		if (this.getCodigoDeSeguranca().equals(result)) {
 			//Criando lista de sensores
 			sensores = new ArrayList<Sensor>();
 			
@@ -81,12 +81,12 @@ public class Controlador {
 	
 	public void desligarSistema() {}
 	
-	public String getCodigoDeSegurança() {
-		return this.codigoDeSegurança;
+	public String getCodigoDeSeguranca() {
+		return this.codigoDeSeguranca;
 	}
 
-	public void setCodigoDeSegurança(String codigoDeSegurança) {
-		this.codigoDeSegurança = codigoDeSegurança;
+	public void setCodigoDeSeguranca(String codigoDeSeguranca) {
+		this.codigoDeSeguranca = codigoDeSeguranca;
 	}
 
 }
