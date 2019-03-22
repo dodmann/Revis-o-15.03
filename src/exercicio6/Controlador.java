@@ -1,6 +1,7 @@
 package exercicio6;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Scanner;
 
@@ -34,10 +35,11 @@ public class Controlador {
 		if (this.getCodigoDeSegurança().equals(result)) {
 			//Criando lista de sensores
 			sensores = new ArrayList<Sensor>();
+			Iterator<Sensor> itr = sensores.iterator();
 			
 			System.out.println("Login realizado com sucesso.");
 			int opcao = 0;
-			while(opcao != 2) {	
+			while(opcao != 4) {	
 				System.out.println("Opcoes: ");
 				System.out.println("\t1 - Adicionar novo sensor:\n\t2 - Acionar sensor(aciona o sensor):\n\t3 - Ativar sensor(altera o seu status para ativo):\n\t4 - Finalizar sessao");
 				opcao = entrada.nextInt();
@@ -48,26 +50,29 @@ public class Controlador {
 						Scanner nomeSensor = new Scanner(System.in);
 						System.out.println(nomeSensor.nextLine());
 						Sensor sensor = new Sensor(nomeSensor.nextLine());
-						sensores.add(sensor);
-						nomeSensor.close();
+						sensores.add(sensor);						
 					break;
 					
 					//Acionar sensor
 					case 2:
-						System.out.println("Verificar sensor");
-						System.out.println("Digite o nome do sensor: ");
-						Scanner nomeSensorVerificacao = new Scanner(System.in);
-						sensores.contains(this.sensor);
-						nomeSensorVerificacao.close();
+//						System.out.println("Verificar sensor");
+//						System.out.println("Digite o nome do sensor: ");
+//						Scanner nomeSensorVerificacao = new Scanner(System.in);
+						System.out.println("Sensores disponíveis: ");
+						while(itr.hasNext()) {
+							Object sensores = itr.next();
+							System.out.print(sensores + " ");
+						}
+						System.out.println();
 					break;
 					
-//					//Ativar sensor
-//					case 3:
-//					break;
-//					
-//					//Finalizar sessao
-//					case 4:
-//					break;
+					//Ativar sensor
+					case 3:
+					break;
+					
+					//Finalizar sessao
+					case 4:
+					break;
 					
 					default: 
 						System.out.println("Opcao invalida.");
